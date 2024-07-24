@@ -6,7 +6,7 @@ package com;
 import java.util.Scanner;
 
 public class Gamewon {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int totalRounds = 0;
         int roundsWon = 0;
@@ -32,7 +32,6 @@ public class Gamewon {
     }
 
     public static boolean playGame(Scanner scanner) {
-        
         int randomNumber = (int) (Math.random() * 25) + 1;
         int guess;
         int attempts = 0;
@@ -50,12 +49,12 @@ public class Gamewon {
                 System.out.println("Too high! Try again.");
             } else {
                 System.out.println("Congratulations! You guessed it right in " + attempts + " attempts!");
-                scanner.nextLine(); 
+                scanner.nextLine(); // Consume newline
                 return true;
             }
         } while (guess != randomNumber);
 
-        scanner.nextLine(); 
-        return false; 
+        scanner.nextLine(); // Consume newline
+        return false;
     }
 }
